@@ -1,8 +1,7 @@
-import org.gradle.api.JavaVersion
 object Config {
-    const val application_id = "com.example.translatorv2"
+    const val application_id = "com.example.dictionaryv2"
     const val compile_sdk = 31
-    const val min_sdk = 21
+    const val min_sdk = 26
     const val target_sdk = 31
     val java_version = JavaVersion.VERSION_1_8
 }
@@ -43,6 +42,12 @@ object Versions {
     //Koin
     const val koinAndroid = "2.1.6"
     const val koinViewModel = "2.1.6"
+
+    //Picasso
+    const val picasso = "2.71828"
+
+    //Glide
+    const val glide = "4.11.0"
 
     //Coil
     const val coil = "0.11.0"
@@ -100,5 +105,12 @@ object TestImpl {
     const val junit = "junit:junit:${Versions.jUnit}"
     const val runner = "androidx.test:runner:${Versions.runner}"
     const val espresso = "androidx.test.espresso:espresso-core:${Versions.espressoCore}"
+}
 
+object Picasso {
+    const val picasso = "com.squareup.picasso:${Versions.picasso}"
+}
+
+object Glide {
+    const val glide = "com.github.bumptech.glide:${Versions.glide}"
 }

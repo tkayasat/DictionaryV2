@@ -3,8 +3,10 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
+
 android {
     compileSdkVersion Config.compile_sdk
+
     defaultConfig {
         applicationId Config.application_id
         minSdkVersion Config.min_sdk
@@ -13,6 +15,11 @@ android {
         versionName Releases.version_name
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
+    buildFeatures {
+        viewBinding true
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -23,6 +30,7 @@ android {
         sourceCompatibility Config.java_version
         targetCompatibility Config.java_version
     }
+
 }
 
 dependencies {
@@ -45,6 +53,8 @@ dependencies {
     implementation Kotlin.stdlib
     implementation Kotlin.coroutines_core
     implementation Kotlin.coroutines_android
+    implementation Kotlin.coroutines_reactor
+    implementation Kotlin.coroutines_reactive
 
     //Koin for Android
     implementation Koin.koin_android
@@ -52,13 +62,12 @@ dependencies {
 
     //Room
     implementation Room.runtime
-    implementation project(path: ':core')
-    implementation project(path: ':historyscreen')
     kapt Room.compiler
     implementation Room.room_ktx
 
     //Coil
     implementation Coil.coil
+
 
     //Test
     testImplementation TestImpl.junit
