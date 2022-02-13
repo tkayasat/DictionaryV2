@@ -20,6 +20,7 @@ dependencies {
 
     //Room
     implementation Room.runtime
+    implementation 'androidx.room:room-common:2.4.1'
     kapt Room.compiler
     implementation Room.room_ktx
 
@@ -28,4 +29,9 @@ dependencies {
     androidTestImplementation TestImpl.runner
     androidTestImplementation TestImpl.espresso
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "androidx.core:core-ktx:+"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }

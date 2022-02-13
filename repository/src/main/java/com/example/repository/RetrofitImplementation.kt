@@ -1,6 +1,7 @@
 package com.example.repository
 
 import com.example.repository.api.ApiService
+import com.example.repository.api.BaseInterceptor
 
 class RetrofitImplementation : DataSource<List<SearchResultDto>> {
 

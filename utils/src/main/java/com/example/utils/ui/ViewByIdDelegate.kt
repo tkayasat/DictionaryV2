@@ -2,6 +2,7 @@ package com.example.utils.ui
 
 import android.R
 import android.app.Activity
+import android.app.Fragment
 import android.view.View
 import androidx.annotation.IdRes
 import androidx.fragment.app.Fragment
@@ -40,3 +41,4 @@ fun <T : View> Activity.viewById(@IdRes viewId: Int): ViewByIdDelegate<T> {
 
 fun <T : View> Fragment.viewById(@IdRes viewId: Int): ViewByIdDelegate<T> {
     return ViewByIdDelegate({ view }, viewId)
+}
