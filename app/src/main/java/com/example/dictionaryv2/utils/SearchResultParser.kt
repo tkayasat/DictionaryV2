@@ -4,7 +4,6 @@ fun mapSearchResultToResult(searchResults: List<SearchResultDto>): List<DataMode
     return searchResults.map { searchResult ->
         var meanings: List<Meaning> = listOf()
         searchResult.meanings?.let {
-
             meanings = it.map { meaningsDto ->
                 Meaning(
                     TranslatedMeaning(meaningsDto?.translation?.translation ?: ""),

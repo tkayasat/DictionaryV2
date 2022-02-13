@@ -62,6 +62,12 @@ dependencies {
 
     //Room
     implementation Room.runtime
+    implementation project(path: ':core')
+    implementation project(path: ':model')
+    implementation project(path: ':utils')
+    implementation 'com.android.volley:volley:1.2.0'
+    implementation project(path: ':model')
+    implementation project(path: ':core')
     kapt Room.compiler
     implementation Room.room_ktx
 
